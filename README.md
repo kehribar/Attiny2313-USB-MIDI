@@ -10,3 +10,5 @@ My modifications can be found below:
 	
 * Made the firmware compatible with the avr-gcc 4.8.1 by changing PROGMEM variables to const PROGMEM variables.
 
+![](./img/build.jpg)
+
