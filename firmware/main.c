@@ -292,7 +292,7 @@ static void hardwareInit(void)
 #endif
 
   /* set baud rate */
-  UBRRL	= 31;			/* 312500Hz at 16MHz clock */
+  UBRRL	= ((F_CPU / (16UL * 31250)) - 1); /* 31250Hz at the frequency defined in the Makefile */
   /*  */
   UCSRB	= (1<<RXEN) | (1<<TXEN);
   UCSRB |= (1<<RXCIE); //RECV INTERRUPT ENABLE
